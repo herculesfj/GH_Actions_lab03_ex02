@@ -3,7 +3,7 @@ name: Build on DockerHub
 on:
   push:
     branches:
-      - master  # ou "branches: ['**']" para todas as branches
+      - branches  # ou "branches: ['**']" para todas as branches
 
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -30,8 +30,8 @@ jobs:
         with:
           context: ./
           push: true
-          dockerfile: ./Dockerfile
-          tags: moisesgc/webacademy:latest
+          file: ./Dockerfile
+          tags: herculesfj/webacademy:latest
 
   deploy:
     runs-on: ubuntu-latest
