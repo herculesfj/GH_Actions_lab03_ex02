@@ -3,7 +3,7 @@ name: Build on DockerHub
 on:
   push:
     branches:
-      - branches  # ou "branches: ['**']" para todas as branches
+      - master  # ou "branches: ['**']" para todas as branches
 
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
