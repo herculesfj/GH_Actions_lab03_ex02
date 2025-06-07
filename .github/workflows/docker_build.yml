@@ -38,4 +38,4 @@ jobs:
     needs: build  # garante que o deploy só roda após o build
     steps:
       - name: Fazendo deploy
-        run: echo "Deploy com sucesso!"
+        run: echo "Deploy com sucesso!!"
